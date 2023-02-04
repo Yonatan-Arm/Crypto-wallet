@@ -1,0 +1,43 @@
+// Externals
+
+// Setup
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+
+// Basics
+@import 'basics/typography';
+@import 'basics/base';
+@import 'basics/helpers';
+@import 'basics/layout';
+@import 'basics/animations';
+
+// Components
+@import 'components/Navbar';
+@import 'components/Filter';
+@import 'components/Login';
+
+// Pages
+@import 'pages/HomePage.scss';
+
+
+
+.App {
+  padding: 20px 60px;
+  min-height: 100vh;
+  background-image: url('../imgs/background.jpg');
+  box-shadow: -1px 15vh 34px -18px rgb(33 22 83 / 64%) inset;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+
+   @include for-normal-layout {
+    padding: 20px 40px;
+  }
+
+  @include for-mobile-layout {
+    padding: 10px 20px;
+  }
+}
